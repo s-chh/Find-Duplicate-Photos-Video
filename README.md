@@ -1,5 +1,5 @@
 # Duplicate-Photos-Finder
-Finds the duplicate images (even with different filenames) in a folder and its sub-folders.
+Finds and deletes all the duplicate images (even with different filenames) in a folder. Repeats it for all sub-directories as well. 
 
 This code requires Python3. Run the following command to install all the dependencies:
 ```python
