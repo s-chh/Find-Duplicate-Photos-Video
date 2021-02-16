@@ -5,9 +5,11 @@ import itertools
 from PIL import Image
 from tqdm import tqdm
 import argparse
+import pdb
+from scipy.spatial import distance
 
 parser = argparse.ArgumentParser(description='find-duplicate-images')
-parser.add_argument('--inspection_folder', type=str, default="", required=True, help='Directory of images.')
+parser.add_argument('--inspection_folder', type=str, default="D:\\Pictures\\Inspection", help='Directory of images.')
 args = parser.parse_args()
 
 inspection_folder = args.inspection_folder
@@ -33,7 +35,8 @@ def check_folder(folder):
 			img = Image.open(os.path.join(folder, files[i])).convert('RGB')
 			if img is not None:
 				img = img.resize((COMPARE_SIZE, COMPARE_SIZE))
-				img = np.array(img)
+				img = np.array(img)[:,:,0]
+				
 				images.append(img)
 				images_name.append(files[i])
 		except:
@@ -47,14 +50,11 @@ def check_folder(folder):
 	if m == 0:
 		print()
 		return
-
+	
 	print("Finding duplicates now...")
-	time.sleep(1)
 	im_duplicates = []
 	for i in tqdm(range(m)):
-		diff = images - images[i]
-		diff = diff.mean(axis=(1,2,3))
-		duplicates = diff == 0
+		duplicates = np.all(images==images[i], axis=(1,2))
 		duplicates[i] = False
 		idx = np.where(duplicates)[0]
 		if idx.size > 0:
@@ -65,6 +65,7 @@ def check_folder(folder):
 			im_duplicate.sort()
 			im_duplicates.append(im_duplicate)
 	time.sleep(1)
+	# pdb.set_trace()
 	im_duplicates.sort()
 	im_duplicates = list(im_duplicates for im_duplicates, _ in itertools.groupby(im_duplicates))
 
