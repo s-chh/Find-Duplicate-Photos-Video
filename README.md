@@ -1,6 +1,7 @@
 # Duplicate-Photos-Finder
 A PIL-based approach for finding and deleting all the duplicate images in a folder. Repeats it for all sub-directories as well. 
 
+<br>
 
 This code requires Python3. Run the following command to install all the dependencies:
 ```python
