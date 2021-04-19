@@ -1,5 +1,6 @@
 # Duplicate-Photos-Finder
 Find and delete all the duplicate images in a folder. Repeats it for all sub-directories as well. 
+<br>
 
 v2 uses 2x2 average pooling to reduce the image size. Provides faster execution and lowers memory consumption.
 
