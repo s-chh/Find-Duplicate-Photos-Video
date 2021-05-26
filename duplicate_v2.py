@@ -18,6 +18,7 @@ print ("Inspection folder: " + str(inspection_folder))
 folders = [x[0] for x in os.walk(inspection_folder)]
 
 COMPARE_SIZE = 300
+sleep_time = 0.1
 
 to_delete = []
 
@@ -29,7 +30,7 @@ def check_folder(folder):
 
 	images = []
 	images_name = []
-	time.sleep(1)
+	time.sleep(sleep_time)
 	for i in tqdm(range(m)):
 		try:
 			img = Image.open(os.path.join(folder, files[i])).convert('L')
@@ -45,18 +46,19 @@ def check_folder(folder):
 				images_name.append(files[i])
 		except:
 			pass
-	time.sleep(1)
+	time.sleep(sleep_time)
 
 	images = np.array(images)
 	m = images.shape[0]
 	print("Images Read. Total images = " + str(m))
 
-	if m == 0:
+	if m < 2:
 		print()
 		return
 
 	print("Finding duplicates now...")
 	im_duplicates = []
+	# pdb.set_trace()
 	for i in tqdm(range(m)):
 		duplicates = np.all(images==images[i], axis=(1,2))
 		duplicates[i] = False
@@ -68,7 +70,7 @@ def check_folder(folder):
 				im_duplicate.append(idx[j])
 			im_duplicate.sort()
 			im_duplicates.append(im_duplicate)
-	time.sleep(1)
+	time.sleep(sleep_time)
 	
 	im_duplicates.sort()
 	im_duplicates = list(im_duplicates for im_duplicates, _ in itertools.groupby(im_duplicates))
