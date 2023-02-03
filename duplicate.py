@@ -94,9 +94,9 @@ if len(to_delete) == 0:
 print("\nFiles marked for delete:")
 for file in to_delete:
 	print(file)
-print("Print Y to delete")
+print("Type Y to delete")
 inp = input()
-if inp == 'Y':
+if inp.lower() == 'y':
 	for file in to_delete:
 		os.remove(file)
 	print("Done.")
