@@ -11,7 +11,7 @@ Begins search at the current folder. Repeats it for all sub-directories as well.
   </tr>
   <tr>
     <td>Images</td>
-    <td>python python images_duplicate_exact.py</td>
+    <td>python images_duplicate_exact.py</td>
   </tr>
   <tr>
     <td>Videos</td>
