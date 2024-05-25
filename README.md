@@ -22,7 +22,7 @@ Begins search at the current folder. Repeats it for all sub-directories as well.
 Or Run "duplicate_media_exact.bat" on a Windows system to run both programs sequentially (images followed by videos).<br><br>
 
 
-## Arguments <br>
+## Run Arguments <br>
 <table>
   <tr>
     <th>Argument</th>
@@ -36,7 +36,7 @@ Or Run "duplicate_media_exact.bat" on a Windows system to run both programs sequ
   </tr>
   <tr>
     <td>keep_largest</td>
-    <td>Keep file with the largest or lowest size among the duplicates. <br>1 for largest and 0 for smallest. </td>
+    <td>Keep the file with the largest or lowest size among the duplicates. <br>1 for largest and 0 for smallest. </td>
     <td>Keep largest</td>
   </tr>
   <tr>
@@ -54,6 +54,6 @@ pip install -r requirements.txt
 ```
 <br>
 
-## Logic <br>
+## Finding Duplicates Logic <br>
 Images are compared using pixel-wise comparison after setting them to a fixed size. <br>
 Videos are compared using pixel-wise comparisons on the first frame (with a fixed size) and by matching their frame length.
