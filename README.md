@@ -1,6 +1,6 @@
 # Duplicate-Images-Photos-Videos-Finder
 Find and display all the exact duplicate images and videos in a folder and delete them (optional). <br>
-Begins search at the current folder. Repeats it for all sub-directories as well. <br>
+Begins search at the current folder. Repeats it for all sub-directories as well. <br><br>
 
 
 ## Run commands <br>
