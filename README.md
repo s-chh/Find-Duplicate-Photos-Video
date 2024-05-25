@@ -36,12 +36,12 @@ Or Run "duplicate_media_exact.bat" on a Windows system to run both programs sequ
   </tr>
   <tr>
     <td>keep_largest</td>
-    <td>Keep file with the largest or lowest size among the duplicates. 1 for largest and 0 for smallest. </td>
+    <td>Keep file with the largest or lowest size among the duplicates. <br>1 for largest and 0 for smallest. </td>
     <td>Keep largest</td>
   </tr>
   <tr>
     <td>compare_size</td>
-    <td>Images are resized to this value for comparison. Higher value stores more pixels and requires more RAM. </td>
+    <td>Images are resized to this value for comparison. <br>Higher value stores more pixels and requires more RAM. </td>
     <td>300 gives accurate and fast results.</td>
   </tr>
 </table>
