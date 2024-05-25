@@ -41,7 +41,7 @@ Or Run "duplicate_media_exact.bat" on a Windows system to run both programs sequ
   </tr>
   <tr>
     <td>compare_size</td>
-    <td>Images are resized to this value for comparison. <br>Higher value stores more pixels and requires more RAM. </td>
+    <td>Images are resized to this value for comparison. <br>Higher value compares more pixels but requires more RAM and runs slower. </td>
     <td>300 gives accurate and fast results.</td>
   </tr>
 </table>
