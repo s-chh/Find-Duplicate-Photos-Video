@@ -36,7 +36,7 @@ Or Run "duplicate_media_exact.bat" on a Windows system to run both programs sequ
   </tr>
   <tr>
     <td>keep_largest</td>
-    <td>keep file with the largest size or lowest. 1 for largest and 0 for smallest. </td>
+    <td>Keep file with the largest or lowest size among the duplicates. 1 for largest and 0 for smallest. </td>
     <td>Keep largest</td>
   </tr>
   <tr>
