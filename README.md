@@ -1,4 +1,4 @@
-# Duplicate-Images-Photos-Videos-Finder
+# Python-Duplicate-Images-Photos-Videos-Finder
 Find and display all the exact duplicate images and videos in a folder and delete them (optional). <br>
 Begins search at the current folder. Repeats it for all sub-directories as well. <br><br>
 
@@ -48,7 +48,7 @@ Or Run "duplicate_media_exact.bat" on a Windows system to run both programs sequ
 <br>
 
 ## Requirements <br>
-This program requires Python3 with numpy and tqdm libraries to function. <br>Run the following command to install the dependent libraries in the Python environment if they are not present already:
+This program requires Python with numpy and tqdm libraries to function. <br>Run the following command to install the dependent libraries in the Python environment if they are not present already:
 ```python
 pip install -r requirements.txt
 ```
