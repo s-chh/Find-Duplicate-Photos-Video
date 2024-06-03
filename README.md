@@ -55,5 +55,5 @@ pip install -r requirements.txt
 <br>
 
 ## Finding Duplicates Logic <br>
-Images are compared using pixel-wise comparison after setting them to a fixed size. <br>
-Videos are compared using pixel-wise comparisons on the first frame (with a fixed size) and by matching their frame length.
+Images are compared using pixel-wise comparison using cosine distance after setting them to a fixed size. <br>
+Videos are compared using pixel-wise comparisons using cosine distance  on the first frame (with a fixed size) and by matching their frame length.
