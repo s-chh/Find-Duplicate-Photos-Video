@@ -74,7 +74,17 @@ def check_folder(folder, compare_size=300):
     print(f"Finding duplicate images within the folder {folder}...")
     images_duplicates = find_duplicates(all_images)
 
-    def file_size(image):                                                       # Function to get file size to decide which image to keep
+    def file_size(image):         
+        """
+        Function to get file size to decide which image to keep
+
+        Parameters:
+            image : index of image
+
+        Returns:
+            file size
+        """
+
         return os.path.getsize(os.path.join(folder, images_name[image]))
 
     # Collect all flagged duplicates and decide which files to keep.
@@ -85,7 +95,7 @@ def check_folder(folder, compare_size=300):
             continue
         visited[i] = True
 
-        image_duplicates = images_duplicates[i]                                 # Get flags of the file
+        image_duplicates = images_duplicates[i]                                 # Get files with duplicates flags for the current file
         if sum(image_duplicates) > 1:                                           # If more than 1 file similar to the current file (including current file)
             duplicate_idx = np.where(image_duplicates)[0].tolist()              # Get indexes of all duplicate images
             duplicate_idx.sort(key=file_size, reverse=args.keep_largest == 1)   # Sort the list based on their size, Reverse is set based on which file size is preferred.
@@ -93,7 +103,7 @@ def check_folder(folder, compare_size=300):
             for j, idx in enumerate(duplicate_idx):                             
                 visited[idx] = True                                             # Set visited of duplicate images to True to avoid unnecessary calls
                 if j > 0:
-                    to_delete.append(os.path.join(folder, images_name[idx]))    # Add all duplicate files for deletion except the prefered original file
+                    to_delete.append(os.path.join(folder, images_name[idx]))    # Add all duplicate files for deletion except the prefered file file
             files_duplicates.append(duplicate_idx)
     
     time.sleep(0.1)
