@@ -1,7 +1,6 @@
-# Python-Duplicate-Images-Photos-Videos-Finder
+# Find-Duplicate-Images-Photos-Videos using Python
 Python code to find and display all the exact duplicate images and videos in a folder and delete them (optional). <br>
 Begins search at the current folder. Repeats it for all sub-directories as well. <br><br>
-
 
 ## Run commands <br>
 <table>
