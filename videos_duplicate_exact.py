@@ -1,10 +1,10 @@
 import os
-import numpy as np
+import cv2
 import time
+import argparse
+import numpy as np
 from PIL import Image
 from tqdm import tqdm
-import argparse
-import cv2
 
 
 video_extensions = ['.mov', '.avi', '.mp4', '.wmv', '.flv', '.mkv']
