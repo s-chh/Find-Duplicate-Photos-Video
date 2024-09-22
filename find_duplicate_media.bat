@@ -1,5 +1,5 @@
 @echo off
-python images_duplicate_exact.py %*
+python duplicate_exact_photos.py %*
 pause
-python videos_duplicate_exact.py %*
+python duplicate_exact_videos.py %*
 pause
