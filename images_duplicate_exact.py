@@ -14,11 +14,11 @@ def find_duplicates(image, thresh=1e-3):
     A threshold is used for deciding if samples are same or not. Found 1e-3 to work the best.
 
     Parameters:
-        image                         (numpy array) : 2D array of shape (input_sample_size, flattened_image_pixels)
+        image                         (numpy array) : 2D array of shape (n_files, flattened_image_pixels)
         threshold for cosine distance (float)       : threshold for deciding duplicate or not.
 
     Returns:
-        bool numpy array of shape (input_sample_size, input_sample_size)
+        bool numpy array of shape (n_files, n_files)
     """
 
     image_unit = image / np.linalg.norm(image, ord=2, axis=1, keepdims=True)    # Convert images to unit vectors
