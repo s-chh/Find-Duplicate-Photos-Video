@@ -182,7 +182,6 @@ def main(args):
     else:
         print("Files not deleted.")
 
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='find-exact-duplicate-videos')
     parser.add_argument('--folder',       type=str, default=".", help='Directory of videos. Default is current directory.')
